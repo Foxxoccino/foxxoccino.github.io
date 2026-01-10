@@ -6,7 +6,7 @@
     "headerURL": "https://f000.backblazeb2.com/file/rileytestut/ExampleSource/OceanHeader.png",
     "website": "https://linktr.ee/foxxoccino",
     "fediUsername": "foxxoccino",
-    "tintColor": "#4185A9",
+    "tintColor": "#3B86F7",
     "featuredApps":
     [
         "com.folf.StationUp"
@@ -21,7 +21,7 @@
             "subtitle": "Control SteamVR Base Stations Power.",
             "localizedDescription": "This is an awesome app only available on AltStore.",
             "iconURL": "https://foxxoccino.github.io/StationUpIcon.png",
-            "tintColor": "##61A5FF",
+            "tintColor": "#61A5FF",
             "screenshots":
             [
                 "https://foxxoccino.github.io/StationUpScreenshot1.png",
