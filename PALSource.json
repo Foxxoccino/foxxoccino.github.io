@@ -1,0 +1,56 @@
+{
+    "name": "Foxxoccino and Hoojao's Source",
+    "subtitle": "All my apps in one place.",
+    "description": "Welcome to my source! Here you'll find all of my apps.",
+    "iconURL": "https://avatars.githubusercontent.com/u/68098933?v=4",
+    "headerURL": "https://f000.backblazeb2.com/file/rileytestut/ExampleSource/OceanHeader.png",
+    "website": "https://linktr.ee/foxxoccino",
+    "tintColor": "#4185A9",
+    "featuredApps":
+    [
+        "com.folf.StationUp"
+    ],
+    "apps":
+    [
+        {
+            "name": "StatinUp",
+            "bundleIdentifier": "com.folf.StationUp",
+            "marketplaceID": "6755368926",
+            "developerName": "Foxxoccino & Hoojao",
+            "subtitle": "Control SteamVR Base Stations Power.",
+            "localizedDescription": "This is an awesome app only available on AltStore.",
+            "iconURL": "https://foxxoccino.github.io/StationUpIcon.png",
+            "tintColor": "##61A5FF",
+            "screenshots":
+            [
+                "https://foxxoccino.github.io/StationUpScreenshot1.png",
+                "https://foxxoccino.github.io/StationUpScreenshot2.png",
+                "https://foxxoccino.github.io/StationUpScreenshot3.png",
+                "https://foxxoccino.github.io/StationUpScreenshot4.png"
+            ],
+            "versions":
+            [
+                {
+                    "version": "1.0.1",
+                    "buildVersion": "34",
+                    "date": "2025-01-09T14:52:00+08:00",
+                    "size": 20000000,
+                    "downloadURL": "https://foxxoccino.github.io/StationUp/variant/e46720fd-44fd-3514-984b-38a2b7f993e3.ipa",
+                    "localizedDescription": "First release.",
+                    "minOSVersion": "26.0"
+                }
+            ],
+            "appPermissions":
+            {
+                "entitlements":
+                [],
+                "privacy":
+                {
+                    "NSBluetoothAlwaysUsageDescription": "Bluetooth required in order to connect to base stations."
+                }
+            }
+        }
+    ],
+    "news":
+    []
+}
