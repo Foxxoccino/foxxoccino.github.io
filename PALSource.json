@@ -1,5 +1,5 @@
 {
-    "name": "Foxxoccino and Hoojao's Source",
+    "name": "Foxxoccino & Hoojao's Source",
     "subtitle": "All my apps in one place.",
     "description": "Welcome to my source! Here you'll find all of my apps.",
     "iconURL": "https://avatars.githubusercontent.com/u/68098933?v=4",
@@ -19,7 +19,7 @@
             "marketplaceID": "6755368926",
             "developerName": "Foxxoccino & Hoojao",
             "subtitle": "Control SteamVR Base Stations Power.",
-            "localizedDescription": "This is an awesome app only available on AltStore.",
+            "localizedDescription": "StationUp lets you effortlessly control the power state of Base Stations 1.0 and 2.0. Built with iOS 26 Liquid Glass design. Fully offline. StationUp delivers an elegant, fully native experience for managing your Base Stations 1.0 and 2.0.\nWhat StationUp Does\n• Turn On / Sleep / Standby\nPower management for Base Stations 1.0 & 2.0.\n• Native Experience\nBuilt with iOS 26 Liquid Glass design.\n• Clean, Modern, Lightweight, Fully Offline for Total Privacy\nNo ads. Fully offline. Just a simple, native experience.",
             "iconURL": "https://foxxoccino.github.io/StationUpIcon.png",
             "tintColor": "#61A5FF",
             "screenshots":
