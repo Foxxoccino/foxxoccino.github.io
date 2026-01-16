@@ -14,7 +14,7 @@
     "apps":
     [
         {
-            "name": "StatinUp",
+            "name": "StationUp",
             "bundleIdentifier": "com.folf.StationUp",
             "marketplaceID": "6755368926",
             "developerName": "Foxxoccino & Hoojao",
