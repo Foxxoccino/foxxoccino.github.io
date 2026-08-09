@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f8f5" />
+    <title>宫保拼音 · QWERTY 练习</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="practice-shell" aria-labelledby="page-title">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">COMBO PINYIN · FULL COURSE</p>
+          <h1 id="page-title">宫保拼音</h1>
+        </div>
+        <div class="status-pill"><span class="status-dot"></span>QWERTY 键盘</div>
+      </header>
+
+      <section class="lesson" aria-label="拼音练习">
+        <div class="course-picker" aria-label="课程选择">
+          <button id="previous-course" type="button" aria-label="上一课">←</button>
+          <label>
+            <span>选择课程</span>
+            <select id="course-select"></select>
+          </label>
+          <button id="next-course" type="button" aria-label="下一课">→</button>
+          <button id="shuffle" class="shuffle" type="button" aria-pressed="false">顺序练习</button>
+          <button id="keyboard-hints" class="hint-toggle" type="button" aria-pressed="false">关闭键盘提示</button>
+        </div>
+        <div class="lesson-meta">
+          <span id="course-name">基础声母</span>
+          <span id="counter">1 / 8</span>
+        </div>
+        <div id="syllables" class="syllables" aria-live="polite"></div>
+        <div class="progress-track" aria-hidden="true"><div id="progress" class="progress"></div></div>
+      </section>
+
+      <section class="echo-row" aria-label="当前键位提示">
+        <button class="utility-key" id="restart" type="button" aria-label="重新开始">重来 <kbd>Esc</kbd></button>
+        <div class="input-code" id="input-code">
+          <kbd id="raw-input">V</kbd>
+          <span class="divider"></span>
+          <span id="translated-input">⟨b⟩</span>
+        </div>
+        <button class="utility-key" id="next" type="button" aria-label="跳过当前练习">跳过 <kbd>↵</kbd></button>
+      </section>
+
+      <section class="keyboard-wrap" aria-label="QWERTY 屏幕键盘">
+        <div id="keyboard" class="keyboard"></div>
+        <p class="keyboard-help" id="hint">按下 <strong>V</strong>，输入声母 <strong>b</strong></p>
+      </section>
+
+      <footer>
+        <div><span>方案</span><strong>宫保拼音</strong></div>
+        <i></i>
+        <div><span>布局</span><strong>QWERTY</strong></div>
+        <i></i>
+        <div><span>课程</span><strong id="course-progress">0 / 15</strong></div>
+      </footer>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
