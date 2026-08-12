@@ -60,6 +60,21 @@ function documentedAliasLabel(sound, primaryCode, optionCode) {
   if (sound.endsWith("ei") && (optionCode === `${primaryCode}E` || primaryCode === `${optionCode}E`)) {
     return primaryCode.length < optionCode.length ? "完整" : "通借";
   }
+  if (sound.endsWith("uo") && primaryCode.endsWith("UO") && optionCode === `${primaryCode.slice(0, -2)}O`) {
+    return "省略 U";
+  }
+  if (sound.endsWith("iao") && primaryCode.endsWith("IAO")) {
+    const prefix = primaryCode.slice(0, -3);
+    if (optionCode === `${prefix}IO`) return "省略空格";
+    if (optionCode === `${prefix}IAR`) return "兼容";
+  }
+  if (sound.endsWith("ou") && sound !== "you" && primaryCode.endsWith("RO") && optionCode === `${primaryCode.slice(0, -2)}IR`) {
+    return "兼容";
+  }
+  if (sound.endsWith("ong") && !sound.endsWith("iong") && sound !== "yong" && primaryCode.endsWith("URO")) {
+    const prefix = primaryCode.slice(0, -3);
+    if (optionCode === `${prefix}IRO` || optionCode === `${prefix}VNE`) return "兼容";
+  }
   const borrowedNgPairs = [
     [primaryCode.replace(/URO$/, "UNE"), primaryCode],
     [primaryCode.replace(/UARO$/, "UANE"), primaryCode],
@@ -95,11 +110,29 @@ function enumerateSyllables() {
       if (/^[ZCS]/.test(code)) return 1;
       return 2;
     };
-    const finalRank = (code) => /(?:URO|UARO|IRO)$/.test(code) ? 0 : 1;
+    const finalRank = (code) => {
+      if (sound.endsWith("uo")) return code.endsWith("UO") ? 0 : code.endsWith("O") ? 1 : 2;
+      if (sound.endsWith("iao")) {
+        if (code.endsWith("IAO")) return 0;
+        if (code.endsWith("IO")) return 1;
+        if (code.endsWith("IAR")) return 2;
+        return 3;
+      }
+      if (sound.endsWith("ou") && sound !== "you") return code.endsWith("RO") ? 0 : code.endsWith("IR") ? 1 : 2;
+      if (sound.endsWith("iong") || sound === "yong") return code.endsWith("IRO") ? 0 : code.endsWith("VNE") ? 1 : 2;
+      if (sound.endsWith("ong") || sound === "weng") {
+        if (code.endsWith("URO")) return 0;
+        if (code.endsWith("UNE")) return 1;
+        if (code.endsWith("IRO")) return 2;
+        if (code.endsWith("VNE")) return 3;
+        return 4;
+      }
+      return /(?:URO|UARO|IRO)$/.test(code) ? 0 : 1;
+    };
     options.sort((a, b) =>
-      a.keys.length - b.keys.length ||
       initialRank(a.code) - initialRank(b.code) ||
       finalRank(a.code) - finalRank(b.code) ||
+      a.keys.length - b.keys.length ||
       a.code.localeCompare(b.code)
     );
     const primary = options[0];
